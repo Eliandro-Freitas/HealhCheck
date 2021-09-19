@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealhCheckDomain", "HealhCheckDomain\HealhCheckDomain.csproj", "{A207A1CB-CD9A-4E1D-9FAB-110B4000432D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A207A1CB-CD9A-4E1D-9FAB-110B4000432D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A207A1CB-CD9A-4E1D-9FAB-110B4000432D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A207A1CB-CD9A-4E1D-9FAB-110B4000432D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A207A1CB-CD9A-4E1D-9FAB-110B4000432D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6E5DBB63-E798-4C2E-845C-D99A2406EF06}
+	EndGlobalSection
+EndGlobal
