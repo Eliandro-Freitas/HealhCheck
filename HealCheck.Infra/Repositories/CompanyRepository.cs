@@ -12,7 +12,7 @@ namespace HealCheck.Infra.Repositories
         public CompanyRepository()
         {
             _context = new DataContext();
-            _context.Database.EnsureCreated();
+            DeleteAndCreateDatabase();
         }
 
         public IEnumerable<Company> Get()
@@ -22,5 +22,11 @@ namespace HealCheck.Infra.Repositories
             => _context.Companies
                 .Where(x => id.Equals(x.Id))
                 .FirstOrDefault();
+
+        private void DeleteAndCreateDatabase()
+        {
+            _context.Database.EnsureDeleted();
+            _context.Database.EnsureCreated();
+        }
     }
 }
