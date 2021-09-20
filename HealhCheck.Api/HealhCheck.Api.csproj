@@ -12,9 +12,4 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\HealCheck.Infra\HealCheck.Infra.csproj" />
-    <ProjectReference Include="..\HealhCheckDomain\HealhCheck.Domain.csproj" />
-  </ItemGroup>
-
 </Project>

@@ -3,15 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealhCheck.Domain", "HealhCheckDomain\HealhCheck.Domain.csproj", "{A207A1CB-CD9A-4E1D-9FAB-110B4000432D}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - API", "01 - API", "{C50FD42C-466E-4A79-BC16-D26C05B773FF}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Domain", "02 - Domain", "{395DF4D6-7247-4840-8F6C-2C9B12304F82}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Infra", "03 - Infra", "{8C70F8F6-0FE3-460C-A360-F1032D0806A4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealCheck.Infra", "HealCheck.Infra\HealCheck.Infra.csproj", "{E7EE9A77-CF5D-4AA0-B0E6-AFD9EA2C798E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HealhCheck.Api", "HealhCheck.Api\HealhCheck.Api.csproj", "{C6D1E0A9-BE92-40A4-814E-BCFE642AADB4}"
 EndProject
@@ -21,14 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A207A1CB-CD9A-4E1D-9FAB-110B4000432D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A207A1CB-CD9A-4E1D-9FAB-110B4000432D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A207A1CB-CD9A-4E1D-9FAB-110B4000432D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A207A1CB-CD9A-4E1D-9FAB-110B4000432D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E7EE9A77-CF5D-4AA0-B0E6-AFD9EA2C798E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E7EE9A77-CF5D-4AA0-B0E6-AFD9EA2C798E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E7EE9A77-CF5D-4AA0-B0E6-AFD9EA2C798E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E7EE9A77-CF5D-4AA0-B0E6-AFD9EA2C798E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C6D1E0A9-BE92-40A4-814E-BCFE642AADB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C6D1E0A9-BE92-40A4-814E-BCFE642AADB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6D1E0A9-BE92-40A4-814E-BCFE642AADB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -38,8 +22,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{A207A1CB-CD9A-4E1D-9FAB-110B4000432D} = {395DF4D6-7247-4840-8F6C-2C9B12304F82}
-		{E7EE9A77-CF5D-4AA0-B0E6-AFD9EA2C798E} = {8C70F8F6-0FE3-460C-A360-F1032D0806A4}
 		{C6D1E0A9-BE92-40A4-814E-BCFE642AADB4} = {C50FD42C-466E-4A79-BC16-D26C05B773FF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution

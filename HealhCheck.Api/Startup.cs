@@ -1,22 +1,11 @@
-using HealCheck.Infra;
-using HealCheck.Infra.Repositories;
-using HealhCheck.Domain.Repositories;
 using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace HealhCheck.Api
 {
@@ -36,20 +25,18 @@ namespace HealhCheck.Api
 
             services.AddControllers();
             services.AddHealthChecks()
-                .AddSqlServer(_connectionString, name: "Instancia SQL Server");
+                .AddSqlServer(_connectionString, name: "SqlServer Local");
 
-            //services.AddDbContext<DataContext>(x => x.UseSqlServer(_connectionString));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "HealhCheck.Api", Version = "v1" });
             });
 
-            services.AddSingleton<ICompanyRepository, CompanyRepository>();
             services.AddHealthChecksUI(options =>
             {
                 options.SetEvaluationTimeInSeconds(1);
                 options.MaximumHistoryEntriesPerEndpoint(10);
-                options.AddHealthCheckEndpoint("API com Health Checks", "/health");
+                options.AddHealthCheckEndpoint("APIs com Health Checks", "/health");
             })
             .AddInMemoryStorage();
         }
@@ -70,10 +57,11 @@ namespace HealhCheck.Api
                 ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
             });
 
-            app.UseHealthChecksUI(options => { 
-                options.UIPath = "/dashboard"; 
-                options.AddCustomStylesheet(@"C:\Estudos\HealhCheck\HealhCheck\HealhCheck.Api\CustomDashboard\dashboardCustom.css");
-        });
+            app.UseHealthChecksUI(options =>
+            {
+                options.UIPath = "/dashboard";
+                options.AddCustomStylesheet(@"C:\Estudos\HealhCheck\HealhCheck\HealhCheck.Api\CustomDashboard\customDashboard.css");
+            });
 
             app.UseHttpsRedirection();
 
